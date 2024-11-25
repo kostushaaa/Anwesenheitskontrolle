@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  # mqtt5 eclipse-mosquitto
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mqtt5_broker
+    ports:
+      - "1883:1883" # default mqtt port
+      - "9001:9001" # default mqtt port for websockets
+    volumes:
+      - ./config:/mosquitto/config:rw
+      - ./data:/mosquitto/data:rw
+      - ./log:/mosquitto/log:rw
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:latest
+    container_name: postgre_chef
+    environment:
+      POSTGRES_USER: Overlordmin
+      POSTGRES_PASSWORD: secretHisPassword
+      POSTGRES_DB: my_db_not_yours
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - default
+
+  mqttx_web:
+    image: emqx/mqttx-web:latest
+    container_name: mqttx_web
+    ports:
+      - "80:80"
+    networks:
+      - default
+
+volumes:
+  config:
+  data:
+  log:
+  postgres_data:
+    driver: local
+
+networks:
+  default:
+    name: mqtt5_broker-network
