@@ -32,7 +32,6 @@ struct UID
 };
 
 
-
 struct OWNER
 {
     String name;
