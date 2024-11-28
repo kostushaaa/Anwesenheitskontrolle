@@ -161,3 +161,36 @@ body {
     color: #7f8c8d;
     font-size: 14px;
 }
+
+/* Anwesenheitsstatus */
+.attendance {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.attendance span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.present {
+    background-color: #2ecc71; /* Grün für anwesend */
+}
+
+.absent {
+    background-color: #e74c3c; /* Rot für abwesend */
+}
+
+.attendance p {
+    margin: 0;
+    font-size: 14px;
+    color: #2c3e50;
+}
