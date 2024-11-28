@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #0056b3;
+}
+
+.login-container p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-container p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+    width: 250px;
+    background-color: #e60c0c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+
+.navbar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #34495e;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.navbar li:hover {
+    background-color: #1abc9c;
+}
+
+/* Hauptinhalt */
+.content {
+    flex-grow: 1;
+    background-color: #ecf0f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+}
+
+/* Benutzer-Kacheln */
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.user-card {
+    background-color: white;
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.user-card p {
+    margin: 5px 0;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Anwesenheitsstatus */
+.attendance {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.attendance span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.present {
+    background-color: #2ecc71; /* Grün für anwesend */
+}
+
+.absent {
+    background-color: #e74c3c; /* Rot für abwesend */
+}
+
+.attendance p {
+    margin: 0;
+    font-size: 14px;
+    color: #2c3e50;
+}
